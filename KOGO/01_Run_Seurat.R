@@ -1,4 +1,3 @@
-
 library(Seurat)
 
 cellranger.dir = "~/Analysis/CellRanger/RNA/Complete/outs/filtered_feature_bc_matrix"
