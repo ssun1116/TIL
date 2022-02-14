@@ -1,5 +1,3 @@
-rm(list = ls())
-
 library(Seurat)
 
 seurat.obj.1 = readRDS("~/Analysis/Seurat/RNA/Complete/Seurat.QC.RDS") # Complete sample
