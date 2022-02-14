@@ -1,5 +1,3 @@
-rm(list = ls())
-
 library(monocle3)
 library(Seurat)
 library(SeuratData)
