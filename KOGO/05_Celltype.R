@@ -1,5 +1,3 @@
-rm(list = ls())
-
 library(Seurat)
 
 input.dir = "~/Analysis/Seurat/RNA"
