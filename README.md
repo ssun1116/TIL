@@ -15,4 +15,4 @@
 ### KOGO Plenary lecture [ Studying immune mechanisms of human diseases by single-cell transcriptomics ] (KAIST 신의철 교수님)
 - FACS의 단점: Ex-vivo stimulation-based assay라는 것.
 - FACS는 cell의 capacity, ability를 보여준다. T cell에 항원 자극을 주면 Interferon을 잘 낸다라는 결과를 FACS에서 얻었다고 했을 때, 이것은 T cell이 항원 자극을 받으면 기능을 한다는 capacity, ability를 보여주는 것이지 in vivo에서 내고있다는 것을 의미하는 것이 아니다. 능력을 재는 것이지, in vivo 현장에서 내고 있다는 것은 아님.
-- 그러나 scRNA-seq 분석은 생체 내에서 꺼냈을 때 그 때의 그 기능을 잴 수 있다. Interferon을 내고 있었는지의 여부를 알 수 있다.
+- 그러나 scRNA-seq 분석은 생체 내에서 꺼냈을 때 당시의 기능을 잴 수 있다. Interferon을 내고 있었는지의 여부를 알 수 있다.
