@@ -11,3 +11,5 @@
 - Merge Seurat : 단순 merge시 batch가 나타나므로 normalization 과정이 필요함. DimPlot 확인 시 batch가 너무 크지 않으면 잘 제거하지 X.
 - FindAllMarkers -> only.pos = TRUE로 설정하기.
 - monocle2 -> UMAP X. Linear 형태의 tree를 만든다. monocle3 -> UMAP을 강조. root를 직접 설정해야하는 한계.
+
+### KOGO Winter Symposium Plenary lecture [ Studying immune mechanisms of human diseases by single-cell transcriptomics ] (KAIST 신의철 교수님)
