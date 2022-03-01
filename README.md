@@ -17,3 +17,9 @@
 - FACS는 cell의 capacity, ability를 보여준다. T cell에 항원 자극을 주면 Interferon을 잘 낸다라는 결과를 FACS에서 얻었다고 했을 때, 이것은 T cell이 항원 자극을 받으면 기능을 한다는 capacity, ability를 보여주는 것이지 in vivo에서 내고있다는 것을 의미하는 것이 아니다. 능력을 재는 것이지, in vivo 현장에서 내고 있다는 것은 아님.
 - 그러나 scRNA-seq 분석은 생체 내에서 꺼냈을 때 당시의 기능을 잴 수 있다. Interferon을 내고 있었는지의 여부를 알 수 있다.
 - Inversion Simpson Index (Complexity), Cytotoxicity score.
+- **What is Cite-Seq?** : Antibody의 constant region에 unique barcode를 부착. Ab-derived tag를 기반으로 cell을 관찰하는 싱글셀 기법.
+- Combined method of highly multiplexed protein marker detection with unbiased transcriptome profiling for thousands of single cells.
+- Cite-seq에서 발견한 novel cell type를 FACS로 분석함. (40%가 Cite-seq, 나머지는 FACS 기반의 분석을 진행하심)
+
+## 집사TV [차세대 유세포 분석기술, CITE-seq을 통해 수용체의 세포 표면 발현량을 단일세포 단위에서 대량으로 정량해 봅시다.]
+- 
