@@ -21,5 +21,5 @@
 - Combined method of highly multiplexed protein marker detection with unbiased transcriptome profiling for thousands of single cells.
 - Cite-seq에서 발견한 novel cell type를 FACS로 분석함. (40%가 Cite-seq, 나머지는 FACS 기반의 분석을 진행하심)
 
-## 집사TV [차세대 유세포 분석기술, CITE-seq을 통해 수용체의 세포 표면 발현량을 단일세포 단위에서 대량으로 정량해 봅시다.]
+## 집사TV [CITE-seq을 통해 수용체의 세포 표면 발현량을 단일세포 단위에서 대량으로 정량해 봅시다]
 - 
