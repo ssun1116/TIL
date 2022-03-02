@@ -1,7 +1,7 @@
 # Today I Learned 📒
 기억은 기록을 이길 수 없다 - Started on February 14th, 2022.
 Daily Report : https://trello.com/c/CVVDi7Hh
---------------------------------------------------------------------
+
 ### KOGO Winter Workshop 0210 [ Single Cell RNA-Seq Analysis ]
 - Seurat : PCA + Graph-based method.
 - Features -> 많이 쓸수록 continuous한 분포가, 적게 쓸수록 discrete한 분포가 나타남
