@@ -1,4 +1,4 @@
-# ✨ Today I Learned, Daily Notes ✨
+# Today I Learned
 
 ## git - 간편 안내서
 - `git clone 사용자명@호스트:/원격/저장소/경로` : 원격 서버의 저장소를 Local에 복제.
