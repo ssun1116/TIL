@@ -16,4 +16,4 @@
 
 <p align="center"><img width="397" alt="image" src="https://user-images.githubusercontent.com/47490862/182034235-e2adbcc2-bad6-4657-a672-bbb185183356.png">
 
-- *RNA-Seq Complication 2* : 한 gene에는 possible transcript 많음. Exon 구성이 다양하게 만들어지기 때문. 따라서 RNA-seq 데이터를 볼 때는 different transcript를 measure, quantify transcript levels for different transcripts in same gene.
+- *RNA-Seq Complication 2* : A gene can have different **transcripts**. 한 gene에는 possible transcript 많음. Exon 구성이 다양하게 만들어지기 때문. 따라서 RNA-seq 데이터를 볼 때는 different transcript를 measure, quantify transcript levels for different transcripts in same gene.
