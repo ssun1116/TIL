@@ -22,12 +22,10 @@
 
 
 - Reads -> junction, exon을 보고 어떤 transcript에서 유래된 read인지 유추할 수 있다. 그러나, transcript에 대한 priori가 없는 경우..? 그리고 얼마나 transcript가 존재하는지 어떻게 추측 가능?
-- Transcript building의 두 가지 접근법
- 1) Assemble transcript without genome reference (Trinity, Velvet, Oases)
+1. Assemble transcript without genome reference (Trinity, Velvet, Oases)
  : FASTQ file에서부터 시작. Read를 가지고 transcript를 assemble.
- 2) Use Genome reference (Cufflink, Scripture) **-> 우리가 다룰 내용**
+2. Use Genome reference (Cufflink, Scripture) -> **우리가 다룰 내용**
  : 우리는 genoem reference가 있기 때문에 exon의 location을 아는 상태. Read를 genome에 mapping하되, 일부의 read는 junction이 있어서 split site라는 것을 감안하고 (**junction read**) mapping을 한다. 가운데를 구성하는 part가 곧 gap. (TopHat, STAR)
  ( Cufflink와 STAR의 차이점은 뭘까?)
- 
-- 어쨌든 mapper를 하고 나면, count all read that fall into a gene regardless of what transcript they come from. (exon level에서 count도 가능하다!)
+- 어쨌든 mapping 후 count all read that fall into a gene regardless of what transcript they come from. (exon level에서 count도 가능하다!)
 
