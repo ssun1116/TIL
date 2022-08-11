@@ -6,3 +6,7 @@
 - working directory -> `git add <파일>` -> 변경된 파일이 index에 추가됨 ->`git commit -m "이번 확정본에 대한 설명"` -> 변경 내용이 확정되어 로컬 저장소의 HEAD에 반영됨 -> `git push origin master` -> 변경 내용을 원격 서버에 올림. remote git update! 원격 저장소에 변경 내용이 반영됨.
 
 ## 3분에 익히는 머신러닝의 기본 원리
+
+## GSEA - Points of Normalized Enrichment Score (NES)
+- A positive NES will indicate that genes in set S will be mostly represented at the top of the provided gene list L.
+- A negative NES will indicate that the genes in the set S will be mostly at the bottom of the provided gene list L.
