@@ -1,5 +1,7 @@
 ## AlphaFold Study (2022.09.21~)
 
+https://colab.research.google.com/github/ssun1116/ColabFold/blob/main/notebooks/AlphaFold.ipynb
+
 - 두가지 단백질 구조 확인 -> 어떻게 binding하는지 확인하는 것이 목적. 
 - monomer : 한개 단백질. monomer 이상을 통틀어 complex라고 함 -> 콜론으로 나눠서 dimer specify.
 - CD99 molecule. <-> IQGAP1, MYH9. 
