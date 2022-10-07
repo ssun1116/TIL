@@ -12,3 +12,5 @@ So, to run GSEA you have your list of genes (L) and two conditions (or more), i.
 Now you want to see whether the genes present in a gene set (S) are at the top or at the bottom of your list...or if they are just spread around randomly. to do that GSEA calculates the famous enrichment score, that becomes normalized enrichment score (NES) when correcting for multiple testing (FDR).
 - A positive NES will indicate that genes in set S will be mostly represented at the top of the provided gene list L.
 - A negative NES will indicate that the genes in the set S will be mostly at the bottom of the provided gene list L.
+
+서버와 데스크탑의 차이점 : https://m.post.naver.com/viewer/postView.naver?volumeNo=10335098&memberNo=2521903
