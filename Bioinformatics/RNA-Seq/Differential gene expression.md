@@ -1,3 +1,11 @@
+# Salmon Quantification
+
+- Pseudo-aligner Salmon allows rapid quantification of transcript abundance without alignment step.
+- Quickly generate gene count matrices -> tximport로 gene level로 변환해서 DE에 사용 가능! 
+
+
+
+
 # Quick start for DESeq2 gene-level DE
 ```
 library(DESeq2)
@@ -6,12 +14,6 @@ dds <- DESeq(dds) # fits the DESeq2 model
 res <- results(dds, contrast=c("condition","trt","ctl"))
 lfc <- lfcShrink(dds, coef="condition_trt_vs_ctl")
 ```
-
-sva -> hidden batch. structural difference.
-
-pseudoaligner : rapid quantify of transcript abundance without alignment step. ex> salmon.
-These pseudoaligners quickly generate gene count matrices -> tximport로 gene level로 변환해서 DE에 사용 가능! 
-
 
 ## How do I use VST or rlog data for differential testing?
 The variance stabilizing and rlog transformations are provided for applications other than differential testing, for example clustering of samples or other machine learning applications. For differential testing we recommend the DESeq function applied to raw counts as outlined above.
