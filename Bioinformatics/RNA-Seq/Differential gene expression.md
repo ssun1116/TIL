@@ -1,4 +1,4 @@
-### Quick start for DESeq2 gene-level DE
+# Quick start for DESeq2 gene-level DE
 ```
 library(DESeq2)
 dds <- DESeqDataSet(se, design=~batch + condition)
