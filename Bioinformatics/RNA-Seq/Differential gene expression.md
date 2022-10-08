@@ -3,6 +3,9 @@
 - Pseudo-aligner Salmon allows rapid quantification of transcript abundance without alignment step.
 - Quickly generate gene count matrices -> tximport로 gene level로 변환해서 DE에 사용 가능! 
 
+### Difference between Alignment vs Mapping
+
+> When we align a read, we're asking for not just where it likely came in the genome, but the exact base to base correspondence. For example, we'd like to get something like, "Read foo likely originated from chr1 positions 123 through 140. The first 7 bases are exact matches between foo and the reference, there's then a 3 base insertion, then the remaining bases match between foo and the reference." When we map a read, we're just asking, "where did it come from?" We don't necessarily care about the exact alignment between the read and where it came from, though. Until recently, "alignment" and "mapping" were pretty much synonymous. Tools like Kallisto and Salmon have changed that, since they can assign reads to genes/features/whatever without needing to look at exact alignments. Since (A) this is faster and (B) we often don't actually care about the alignment, this is a HUGE advantage in some applications.
 
 
 
