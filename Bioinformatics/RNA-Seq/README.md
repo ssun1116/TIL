@@ -29,3 +29,9 @@
  ( Cufflink와 STAR의 차이점은 뭘까?)
 - 어쨌든 mapping 후 count all read that fall into a gene regardless of what transcript they come from. (exon level에서 count도 가능하다!)
 
+
+## GSEA - Points of Normalized Enrichment Score (NES)
+So, to run GSEA you have your list of genes (L) and two conditions (or more), i.e. a microarray with normal and tumor samples. the first thing that GSEA does is to rank the genes in L based on "how well they divide the conditions" using the probe intensity values. at this point you have a list L ranked from 1...n.
+Now you want to see whether the genes present in a gene set (S) are at the top or at the bottom of your list...or if they are just spread around randomly. to do that GSEA calculates the famous enrichment score, that becomes normalized enrichment score (NES) when correcting for multiple testing (FDR).
+- Positive NES will indicate that genes in set S will be mostly represented at the top of the provided gene list L.
+- Negative NES will indicate that the genes in the set S will be mostly at the bottom of the provided gene list L.
