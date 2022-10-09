@@ -8,8 +8,8 @@
 ## GSEA - Points of Normalized Enrichment Score (NES)
 So, to run GSEA you have your list of genes (L) and two conditions (or more), i.e. a microarray with normal and tumor samples. the first thing that GSEA does is to rank the genes in L based on "how well they divide the conditions" using the probe intensity values. at this point you have a list L ranked from 1...n.
 Now you want to see whether the genes present in a gene set (S) are at the top or at the bottom of your list...or if they are just spread around randomly. to do that GSEA calculates the famous enrichment score, that becomes normalized enrichment score (NES) when correcting for multiple testing (FDR).
-- A positive NES will indicate that genes in set S will be mostly represented at the top of the provided gene list L.
-- A negative NES will indicate that the genes in the set S will be mostly at the bottom of the provided gene list L.
+- Positive NES will indicate that genes in set S will be mostly represented at the top of the provided gene list L.
+- Negative NES will indicate that the genes in the set S will be mostly at the bottom of the provided gene list L.
 
 ## IT Basic Information
 서버와 데스크탑의 차이점 - https://m.post.naver.com/viewer/postView.naver?volumeNo=10335098&memberNo=2521903
@@ -28,3 +28,7 @@ Routing : 네트워크 안에서 데이터를 보낼 때 최적의 경로를 선
 
 ## AWS
 EC2 (AWS Elastic Compute Cloud) : AWS 클라우드에서 확장 가능 컴퓨팅 용량을 제공. 쉽게 확장, 축소 등의 재구성이 가능.
+VPC (Virtual Private Cloud) : 사용자가 정의한 가상 네트워크 -> VPC를 사용하여 AWS 리소스를 시작할 수 있ㅇㅁ. 
+Subnet : VPC의 IP 주소 범위. 지정된 서브넷으로 AWS 리소스를 시작할 수 있음. 
+Routing table : 서브넷 또는 게이트웨이의 네트워크 트래픽이 전송되는 위치를 결정.
+Internet gateway : VPC와 인터넷 간에 통신할 수 있게 해줌. 
