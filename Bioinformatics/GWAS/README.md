@@ -5,7 +5,7 @@
 - GWAS : Patient와 Control 그룹의 genetic variant, allele의 빈도를 비교. 빈도가 얼마나 통계적으로 유의한지 분석하는 것.
     - Germline 유전병 -> 일생동안 변화하지 않아서 MR 도구로 적합함.
 
-### What is MR?
+## What is Mendelina Randomization (MR)?
 
 
 <img width="1390" alt="image" src="https://user-images.githubusercontent.com/47490862/195232291-c6810994-a14c-42ff-8a5f-42279ec87b5d.png">
