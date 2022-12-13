@@ -27,7 +27,13 @@ Link for this updates : https://yulab-smu.top/biomedical-knowledge-mining-book/e
 - P-values should be adjusted for multiple comparison.
 
 ```
-fisher.test(d, alternative = "greater")
+ego <- enrichGO(gene         = gene.df$ENSEMBL,
+                OrgDb         = org.Hs.eg.db,
+                keyType       = 'ENSEMBL',
+                ont           = "CC",
+                pAdjustMethod = "BH",
+                pvalueCutoff  = 0.01,
+                qvalueCutoff  = 0.05)
 ```
 
  2. **Gene Set Enrichment Analysis** : 우리가 기존에 "rank-based test"라고 불러왔던 것. All genes can be used in GSEA, aggregating the per gene statistics across genes within a geneset. Genes are ranked based on their phenotypes -> the goal of GSEA is to determine whether the members of priori genes are randomly distributed throughout the ranked gene list or primarily found at the top or bottom.
@@ -39,7 +45,17 @@ fisher.test(d, alternative = "greater")
 - Adjustment for Multiple Hypothesis Testing.
   - When the entire gene sets are evaluated, the estimated significance level is adjusted to account for multiple hypothesis testing and also q-values are calculated for FDR control.
 
+### We will use this GSEA Method!!
 
+```
+ego <- gseGO(geneList     = geneList,
+              OrgDb        = org.Hs.eg.db,
+              ont          = "CC",
+              minGSSize    = 100,
+              maxGSSize    = 500,
+              pvalueCutoff = 0.05,
+              verbose      = FALSE)
+```
 
 
 
