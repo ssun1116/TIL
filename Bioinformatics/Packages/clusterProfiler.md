@@ -64,7 +64,10 @@ y <- gsePathway(geneList,
                 verbose = FALSE)                 
 ```
 
-### 여기까지는 보통 FGSEA 결과와 큰 차이가 없음. but... graph visualization 등에서 특화된 툴이다.
+여기까지는 보통 FGSEA 결과와 큰 차이가 없음. but... 다양한 DB와의 enrichment test를 하는 것에 flexibility를 제공하고, graph visualization 등에서 특화된 툴이다!
+- `enrichGO`, `enrichKEGG`, `enrichReactome` 등 function을 다르게 주는 것 만으로도 다양한 db와의 enrichment를 손쉽게 가능함.
+- `dotplot`, `cnetplot` 등으로 결과를 쉽게 시각화 가능 & `comparecluster` -> 병렬적으로 시각화하는 것도 아주 간단하게 가능하다.
+- 자세한 내용은 https://yulab-smu.top/biomedical-knowledge-mining-book/ 에서 chapter 14, 15를 참고!
 
 
 
