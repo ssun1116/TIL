@@ -6,7 +6,7 @@
     -  다른 ontology와의 association 분석도 쉽게 가능함 (ex. DO: Disease Ontology for human -> identification of clinical relavance)
   - `compareCluster` : automatically calculate enriched functional categories of each gene clusters and provide methods for visualization..!
 
-<img width="694" alt="image" src="https://user-images.githubusercontent.com/47490862/207292336-1294f458-846e-422b-b248-a531b87cccdd.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/47490862/207292336-1294f458-846e-422b-b248-a531b87cccdd.png">
 
 ### Further Plans for Package Development
 1. Use semantic similarity among KEGG / GO terms to aggregate closely related categories. -> *What I Expected!!*
