@@ -45,8 +45,6 @@ ego <- enrichGO(gene         = gene.df$ENSEMBL,
 - Adjustment for Multiple Hypothesis Testing.
   - When the entire gene sets are evaluated, the estimated significance level is adjusted to account for multiple hypothesis testing and also q-values are calculated for FDR control.
 
-### We will use this GSEA Method!!
-
 ```
 ego <- gseGO(geneList     = geneList,
               OrgDb        = org.Hs.eg.db,
@@ -55,7 +53,19 @@ ego <- gseGO(geneList     = geneList,
               maxGSSize    = 500,
               pvalueCutoff = 0.05,
               verbose      = FALSE)
+              
+mkk <- gseMKEGG(geneList = geneList,
+                 organism = 'hsa',
+                 pvalueCutoff = 1)
+                 
+y <- gsePathway(geneList, 
+                pvalueCutoff = 0.2,
+                pAdjustMethod = "BH", 
+                verbose = FALSE)                 
 ```
+
+### 여기까지는 보통 FGSEA 결과와 큰 차이가 없음. but... graph visualization 등에서 특화된 툴이다.
+
 
 
 
