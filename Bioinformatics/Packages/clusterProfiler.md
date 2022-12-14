@@ -67,9 +67,47 @@ y <- gsePathway(geneList,
 여기까지는 보통 FGSEA 결과와 큰 차이가 없음. but... 다양한 DB와의 enrichment test를 하는 것에 flexibility를 제공하고, graph visualization 등에서 특화된 툴이다!
 - `enrichGO`, `enrichKEGG`, `enrichReactome` 등 function을 다르게 주는 것 만으로도 다양한 db와의 enrichment를 손쉽게 가능함.
 - `dotplot`, `cnetplot` 등으로 결과를 쉽게 시각화 가능 & `comparecluster` -> 병렬적으로 시각화하는 것도 아주 간단하게 가능하다.
-- 자세한 내용은 https://yulab-smu.top/biomedical-knowledge-mining-book/ 에서 chapter 14, 15를 참고!
+
+## Chapter 15. Visualization of functional enrichment result
+- Link : https://yulab-smu.top/biomedical-knowledge-mining-book/enrichplot.html -> ClusterProfiler 패키지의 꽃! 시각화 파트!
+
+### Gene-concept Network
+
+<img width="718" alt="image" src="https://user-images.githubusercontent.com/47490862/207520297-901dfa71-daa9-4a18-8819-30772881a358.png">
+
+```
+cnetplot(edox, categorySize="pvalue", foldChange=geneList, node_label="all", color_category='firebrick', 
+        color_gene='steelblue')
+```
+
+- Enrich된 pathway term들에 어떤 gene들이 포함되어 있는지? Gene과 biological term을 연결해서 네트워크로 시각화!
+
+### Tree Plot
+
+<img width="721" alt="image" src="https://user-images.githubusercontent.com/47490862/207521088-b76c2167-307b-4a89-9dff-15ff4d1e2c0f.png">
+
+```
+edox2 <- pairwise_termsim(edox)
+treeplot(edox2)
+```
+
+- `pairwise_termsim()` function으로 계산한 enriched term간의 pairwise similarities 를 기반으로 hierarchical clustering을 진행!
+  - This will reduce the complexity of the enriched result and improve user interpretation ability.
 
 
+### Enrichment Map
 
+<img width="711" alt="image" src="https://user-images.githubusercontent.com/47490862/207521568-463f2854-2413-47ca-a5b3-7aa7830eb9f7.png">
 
+```
+xx <- compareCluster(gcSample, fun="enrichKEGG",
+                     organism="hsa", pvalueCutoff=0.05)
+xx <- pairwise_termsim(xx)
+emapplot(xx, pie="count")
+```
+
+- ovelapping geneset을 기반으로 term들간의 network를 구성!
+  - mutually overlapping gene sets are tend to cluster together, making it easy to identify functional module.
+- `clustercompare` 실행 결과를 network 시각화에 반영하는 것도 가능.
+  - proportion of clusters can be adjusted using the `pie` parameter (determined by the number of genes)
 
