@@ -1,5 +1,5 @@
-Paper link : https://www.nature.com/articles/s41592-019-0667-5
-Github link : https://github.com/saeyslab/nichenetr
+- Paper link : https://www.nature.com/articles/s41592-019-0667-5
+- Github link : https://github.com/saeyslab/nichenetr
 
 ![Untitled](https://user-images.githubusercontent.com/47490862/211726842-0e076e15-d1d2-43ca-86a9-0fd40add9301.png)
 
