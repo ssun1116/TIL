@@ -10,4 +10,6 @@ and can help to uncover regulators underlyin gidsease and other phenotypes.
 
 - 유전자들은 따로 존재하는게 아니라 서로 연결되어 같은 기능을 한다.
 
-중요 논문 : https://10.1093/bib/bbw139
+중요 논문 : [https://10.1093/bib/bbw139](https://academic.oup.com/bib/article/19/4/575/2888441)
+
+
