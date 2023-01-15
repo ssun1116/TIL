@@ -31,6 +31,9 @@
 - Score : expression을 기반으로 계산됨 -> gene expression이 protein abundance를 나타내고 / protein abundance만으로 PPI binding을 추론하기에 충분하다고 가정 (PTM, complex 등을 무시)
   - **Binary ('expression thresholding', 'differential combinations') or Continuous ('expression product', 'expression correlation')**
 
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/47490862/212540079-a4d917c3-be0c-4494-962b-8f20cbcba06b.png">   <img width="500" alt="image" src="https://user-images.githubusercontent.com/47490862/212540353-c6cd09fe-eb0d-48b8-a7fc-2e46b333bd0f.png">
+
+
 ### Binary score.
 - *Expression thresholding* : LR pair에서 각각 expression value를 thresholding -> 두 gene이 모두 통과하면 'active', 통과하지 못하면 'inactive'.
 - *Differential combintations* : 'active' interacting partner를 확인하기 위해 differential gene expression 분석을 활용 (sample or cell-type specific manner)
@@ -42,8 +45,35 @@
 
 => limitation을 이해하고 data set processing을 알맞게 진행하는 것이 false discovery를 최소화하는 방법!!
 
-## 3. 사용되는 툴들의 특징과 강/약점
+### Distinguishing interacting pair of cells
+- 앞서 계산한 individual scores -> entire state 추론을 위해 aggregation이 필요! 
+- 가장 흔한 방법은 active LR pair의 수를 정량하는 것 (Sum of scores). 그러나 count는 비슷해도 완전히 다른 communication을 하는 경우, inaccurate.
+- Newer method : **weighting CCI on the basis of additional data**
+  - Probability를 반영하여 aggregation, variation을 평가, distance metric, ...
 
+## 3. 사용되는 툴들의 예시.
+### Differential combination-based
+- cell cluster간 DEG를 계해서 ligrand-receptor pair 분석에 활용. 그룹끼리 commonly 존재하는 interaction은 못 찾는다는 한계.
+  - iTALK and CellTalker, CCCExplorer.
+ 
+### Network-based
+- Gene connection을 활용. LR co-expression이 downstream signaling gene에 미치는 영향을 기반으로 score를 계산. 그러나 gene regulation까지 설명하지는 못함.
+  - CCCExplorer : ligand-receptor signaling에 관여하는 gene들의 concerted expression level change를 활용.
+  - **Nichenet** : ligand, receptor, downstream target간의 interaction을 기반으로 LR relationship network를 구축.
 
+### Expression permutation-based
+- *가장 널리 쓰이는 tool*. 각 LR pair에 대해 communication score를 계산한뒤 cluster label permutation, non-parametric test 등으로 significance를 평가. 
+  - CellPhoneDB, CellChat, ICELLNET. 
+  - **CellChat** : allows multisubunit complexes, and incorporates positive / negative effectors into its Hill function-inspired framework.
 
-## 4. CCI 분석 결과를 검증하는 방법
+### Array-based (Tensor-based)
+- Most mathematically sophisticated tool. Rank three tensor를 사용 : two dimensions are for ligand and receptor expression, third dimension is for LR interactions. Then, non-negative Tucker decomposition is performed to decompose this tensor -> three matrices with coefficients representing the relationship between interacting cells and respective ligands, receptors. 그러나 다른 툴에 비해 score를 해석하는 게 직관적이지 못함...
+
+### Visualization methods.
+<p align="center">
+  <img width="600" alt="image" src="https://user-images.githubusercontent.com/47490862/212540854-57412f75-2255-4d59-926f-6bfe8b9800c7.png">
+<p/>
+
+## 4. CCI 분석 결과를 검증하는 방법 - computational methods.
+### Permutation-based analysis
+- Random nosie로 인해 일어나는 result를 discard. 
