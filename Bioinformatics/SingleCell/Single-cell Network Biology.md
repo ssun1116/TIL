@@ -1,3 +1,5 @@
+### Main Paper link 
+https://www.nature.com/articles/s12276-020-00528-0
 
 ## GENIE3 (GEne Network Inference with Ensemble of trees)
 - Statistical approach가 아닌 machine learning approach.
