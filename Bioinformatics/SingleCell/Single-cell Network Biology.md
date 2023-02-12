@@ -4,7 +4,7 @@
 - 여러 tree를 만들고 decision을 모아서 최종 모델을 만드는 것 (Random forest 방법)
 - 무엇을 learning? 특정 유전자 variance를 가장 잘 설명하는 유전자 (correlation을 가질 확률이 높음)
 - 통계적으로 robust한 correlation은 아니더라도, 하나의 expression variance를 다른 expression variance가 잘 설명한다면, 두 유전자 간의 correlation으로 regulatory 관계성을 규정할 수 있다?
-- Feature selection problem과  
+- Feature selection problem과 유사.
 - 통계적으로 robust한 correlation은 아니더라도, 하나의 expression variance를 다른 expression variance가 잘 설명한다면, 두 유전자 간의 correlation으로 regulatory 관계성을 규정할 수 있다?동일하다. 
 - 통계적으로 robust한 correlation은 아니더라도, 하나의 expression variance를 다른 expression variance가 잘 설명한다면, 두 유전자 간의 correlation으로 regulatory 관계성을 규정할 수 있다? 가장 잘 설명하는 유전자들의 rank를 매기고 종합해서 => interaction ranking. 이것이 곧 network score order가 된다...
 - **Ensemble Learning** : weak model을 많이 만들어서 (individual trees) 종합해서 강력한 final model을 (forest) 만드는 것. 크게 두 learning type이 있음 : *Bagging*, *Boosting*
@@ -40,6 +40,8 @@
 - Co-expression QTL
 
 ## Hypothesis from subnetwork analysis
+<p align = "center"> <img width="600" alt="Screen Shot 2023-02-12 at 4 53 21 PM" src="https://user-images.githubusercontent.com/47490862/218299936-d7960071-c42c-4a3b-9bf0-8d80f21fc75a.png">
+
 1. WGCNA
 - 각각의 모듈을 봤을 때 특정 모듈에 대해 module activity가 state별로 다른 경우 -> 이 모듈이 hyper active해지면서 특정 질환이 생겼구나 하는 스토리를 만들 수 있다. 특정 모듈이 disease state에서 activity가 올라가고 내려가는 것을 보고 특정 질환과 특정 cell type이 어떻게 연관성을 갖는지 스토리를 얻을 수 있다. 또한 특정 key regulator를 찾아서 동물 실험 등으로 validation하는 것도 가능하다.
 - 모듈로 development state를 설명하는 것도 가능 : 시간이 지나가면서 acitivty가 올라가는 module도 있고, 내려가는 module도 있고.. 등등! module이 발생 과정에서 어떻게 기능하는지를 알아보는 데 분석을 사용할 수도 있겠다.
@@ -49,6 +51,8 @@
 - DNA binding motif 정보를 가지고 보다 정확한 link를 찾아서 regulon을 한번 정리한 다음, 여기서 찾은 regulon을 가지고 regulon gene에 대한 rank를 매겨서 AUCell score를 부여. 
 
 ## Hypothesis from Network Topology analysis
+<p align = "center"> <img width="600" alt="Screen Shot 2023-02-12 at 5 00 48 PM" src="https://user-images.githubusercontent.com/47490862/218299932-1410a824-0508-4cf4-8fa5-1c385ea8f755.png">
+
 - State에 따라 cell을 나눠서 netowork를 만들면 -> topogly가 state에 따라 다를 수 있음.
 	- State에 의해 centrality, neighbor, modularity가 바뀔 수 있다.
 - Trajectory에서 특정 branch에 있는 cell들끼리 network를 만들어 볼 수도 있을 것. 두 branch 사이에 어떤 차이가 있는지로 story를 만들어볼 수도 있을 것이다.
