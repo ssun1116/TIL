@@ -1,5 +1,4 @@
-# Deep learning based approaches for WGS 
-### Deep-learning prediction on noncoding variants from WGS data
+# Deep-learning prediction on noncoding variants from WGS data
 
 ## WGS (Whole Genome Sequencing)
 - 가장 원시적인 형태의 분석. **Genome의 모든 genetic variant를 찾는 것.** SNV부터 큰 규모의 염기서열 변화인 SV까지. 특정 형질 / 질환과의 연관성을 평가하거나, noncoding 지역에 나타나는 rare variant를 찾음.
@@ -43,3 +42,17 @@
 - 품질지표 2 : FS, SOR - 특정 strand에 의한 systemic bias. GC / AT 결합력 차이로 인해 PCR에서 sequencing read 수가 달라질 수도 있다. 
 - 품질지표 3 : Mapping quality. Mapping이 정확한지에 대한 지표.
 - 품질지표 4 : DP, QD. Variant가 발생한 위치의 read depth가 얼마나 충분한가. Sequence coverage를 나타내는 지표. 너무 낮은 경우 low-confidence call, 너무 높은 경우는 sequencing에 systemic bias가 발생했다는 것을 암시. 
+
+
+### Hail
+- Open-source Python library for genomic data manipulation and analysis.
+- Written in python, based on Apache Spark.
+	- Apache Spark : genomics data는 굉장히 큰 규모의 데이터이고 유용한 정보는 적은 비효율적 데이터이기 때문에 분산처리가 필요. VCF 데이터의 특징은 염색체 / 특정 locus에 의해 구획을 나눌 수 있다는 점. 따라서 데이터를 partition으로 나누어서 빠르고 효율적으로 데이터 사용 가능. 데이터를 실시간 스트리밍하기 때문에 가진 데이터의 address를 기억했다가 query한 지점에서 데이터를 불러와서 사용 가능 (전부 다 메모리에 올리는 것이 아니라). 
+- Implements a genomic dataframe "MarixTable"
+	- 3개의 data frame이 연결된 구조 : row table (VCF info) + column table (Sample info) + entry table (VCF format)
+- Spark를 기반으로 하기 때문에 SQL processing, machine learning algorhthm을 사용 가능.
+
+1. Variant level quality control
+- 어떤 variant가 분석에 사용할 수 있는 좋은 variant인지를 추출. `hl.sample_qc`, `hl.variant_qc` + 추가적인 여러 visualization...
+2. Find noncoding variants from qualifying variants
+- Genomic position, gene, transcript, codon change, functional score 등 *variant annotation* 정보를 알고 있어야 함 (tool : **VEP**, ANNOVAR, SNPEFF)
